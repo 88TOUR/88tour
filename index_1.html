@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>연애 가치관 테스트</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="app">
+    <!-- 이름 입력 화면 -->
+    <div id="start-screen">
+      <h1>나의 연애 가치관은?</h1>
+      <input type="text" id="username" placeholder="당신의 이름을 입력하세요" />
+      <button onclick="startTest()">시작하기</button>
+    </div>
+
+    <!-- 질문 화면 -->
+    <div id="quiz-screen" style="display: none;">
+      <div id="question-number"></div>
+      <div id="question-text"></div>
+      <button onclick="selectAnswer('A')" class="choice-btn" id="btn-a"></button>
+      <button onclick="selectAnswer('B')" class="choice-btn" id="btn-b"></button>
+    </div>
+
+    <!-- 결과 화면 -->
+    <div id="result-screen" style="display: none;">
+      <h2>테스트 결과</h2>
+      <p id="result-text"></p>
+      <button onclick="location.reload()">다시 하기</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
