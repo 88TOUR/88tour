@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>나의 연애 가치관 테스트</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="center-box">
+
+      <!-- 시작 화면 -->
+      <div id="start-screen">
+        <!-- 로고 이미지 (logo.png 파일을 프로젝트 루트에 두세요) -->
+        <img src="logo.png" alt="로고" class="logo" />
+
+        <!-- 제목 -->
+        <h1 class="title">나의 연애 가치관 테스트</h1>
+        <p class="subtitle">나의 연애 가치관 유형과<br>나와 가장 잘 어울리는 사람은?</p>
+
+        <!-- 시작 버튼 -->
+        <button onclick="startTest()">성향 테스트 하기 ➡</button>
+      </div>
+
+      <!-- 질문 화면 -->
+      <div id="quiz-screen" style="display: none;">
+        <div id="question-number" class="question-num"></div>
+        <div id="question-text" class="question-text"></div>
+        <button onclick="selectAnswer('A')" class="choice-btn" id="btn-a"></button>
+        <button onclick="selectAnswer('B')" class="choice-btn" id="btn-b"></button>
+      </div>
+
+      <!-- 결과 화면 -->
+      <div id="result-screen" style="display: none;">
+        <h2>테스트 결과</h2>
+        <p id="result-text"></p>
+        <button onclick="location.reload()">다시 하기</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
